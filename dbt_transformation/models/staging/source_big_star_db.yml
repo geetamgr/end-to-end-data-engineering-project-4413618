@@ -1,0 +1,23 @@
+# dbt_transformation/models/staging/src_big_star_db.yml
+version: 2
+
+sources:
+  - name: raw_dataset
+    database: deproject-512011
+    schema: raw_dataset
+    config:
+      freshness:
+        warn_after:
+          count: 24
+          period: hour
+      loaded_at_field: "_airbyte_extracted_at"
+    tables:
+      - name: address
+      - name: cart
+      - name: cartitem
+      - name: customer
+      - name: customerorder
+      - name: orderitem
+      - name: payment
+      - name: product
+      - name: shipping

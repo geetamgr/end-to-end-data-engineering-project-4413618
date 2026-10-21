@@ -1,0 +1,20 @@
+version: 2
+
+models:
+   - name: dim_customer
+     columns:
+      - name: customerid
+        tests:
+          - not_null
+      - name: name
+        tests:
+          - not_null
+      - name: email
+        tests:
+          - not_null
+      - name: phonenumber
+        tests:
+          - not_null
+      - name: dateregistered
+        tests:
+          - not_null
